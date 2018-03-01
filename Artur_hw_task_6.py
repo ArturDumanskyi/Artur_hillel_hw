@@ -7,5 +7,5 @@ import math
 a = -20
 b = 2
 c = 42
-result = ((math.log1p(1 + c - 1)) / (-b))**4 + math.fabs(a)
-print("Результат выражения, при значении a = %.f, b = %.f, и c = %.f, будет равен %.1f" % (a, b , c, result, ))
+result = (math.log1p(c) / (-b))**4 + math.fabs(a)
+print("Результат выражения, при значении a = %.f, b = %.f, и c = %.f, будет равен %.1f" % (a, b, c, result,))
