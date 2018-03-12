@@ -3,21 +3,18 @@
 
 import math
 
-parity = input("Введите число: ")
-parity = int(parity)
 
-if parity % 2 == 0:
-    print("число парное")
+def is_even(number):
+    if number % 2 == 0:
+        return True
+    else:
+        return False
+
+number = 12
+if is_even(number):
+    print('Число парное')
 else:
-    print("число непарное")
+    print('Число непарное')
 
 
-# def parity(number):
-#     return
-#     number = input("Введите число: ")
-#     number = int(number)
-#     if number % 2 == 0:
-#         print("число парное")
-#     else:
-#         print("число непарное")
 
