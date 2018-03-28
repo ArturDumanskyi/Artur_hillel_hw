@@ -1,25 +1,23 @@
-# # Задание №22
-# 22.	Для удобства проведения вступительных экзаменов всеx абитуриентов
-# в MIT разбивают на группы в зависимости от первых букв их фамилии.
-# Группы называются ‘A-I’, ‘J-P’, ‘Q-T’, ‘U-Z’.
-# Название группы определяет в какую группу попадает абитуриент,
-# в зависимости от первой буквы его/ее фамилии. Например,
-# Will Smith попадает в группу ‘Q-T’, т.к. первая буква его фамилии попадает
-# в диапазон букв от ‘Q‘ до ‘Т‘ (включительно!).
-# Абитуриент Jay Z попадает в группу ‘U-Z’ и т.д. Написать функцию,
-# которая получает список имен студентов вида
-# ['Name1 Surname1', 'Name2 Surname2', 'Name3 Surname3', ...]
-# и возвращает количество абитуриентов в группах, сформированных по их фамилиям,
-# описанным выше образом.
-#      def group_by_surname(list_of_enrollees): # returns 4 ints
-# 			pass
+# Задание №22
+import random
 
-def group_by_surname(list_of_enrollees):
-
-    for i in list_of_enrolleess:
-        print(i)
-    return(i)
-
-list_of_enrollees = ['John Lehnon', 'Ringo Star', 'Poll Macartney']
-print(group_by_surname(list_of_enrollees))
-
+def game():
+    print('Welcome!')
+    while True:
+        print('Я хочу сыграть с вами в игру!')
+        choice = input('Введите на клаиваитаре y - если хотите играть, n - если хотите покинуть игру')
+        if choice == 'y':
+            computer_choice = random.randint(1, 10)
+            while True:
+                user_choice = int(input(('введите число:')))
+                if user_choice == computer_choice:
+                    print('Поздравляю! Загаданное число =', user_choice)
+                    break
+                elif user_choice < computer_choice:
+                    print('Загаданное компьюетром число больше')
+                elif user_choice > computer_choice:
+                    print ('Загаданное компьютером число меньше')
+        elif choice == 'n':
+            print('Всего наилучшего!')
+            break
+game()
